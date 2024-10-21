@@ -1,0 +1,25 @@
+@use "./colors";
+
+.lang-op{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: colors.$main;
+    background: colors.$background-light;
+    border: none;
+    padding: 0.4em;
+    border-radius: 0.2em;
+    margin-bottom: 0.3em;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    line-height: 1.5;
+    transition: all ease-in-out 0.3s;
+}
+.lang-op::selection{
+    display: none;
+}
+.lang-op:hover{
+    background-color: colors.$main-lightest;
+    color: colors.$background;
+    font-size: 1.6em;
+    padding: 0.32em;
+}

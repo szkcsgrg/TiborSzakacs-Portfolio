@@ -1,0 +1,211 @@
+@use "./colors";
+
+.language-picker{
+    height: 100svh;
+    width: 100%;
+}
+.brush-stroke{
+    top: -16em;
+    left: -16em;
+    transform: rotate(20deg);
+    width: 100%;
+    z-index: -1;
+}
+.profile{
+    width: 90%;
+}
+.logo{
+    color: colors.$background;
+    font-size: calc(1.5rem + 1vw);
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+    &:hover{
+        color: colors.$accent;
+    }
+}
+.lang-pick{
+    font-size: calc(0.8rem + 1vw);
+    color: colors.$background-light;
+    cursor: pointer;
+}
+.hamburger{
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: calc(1.5rem + 1vw);
+    color: colors.$background-light;
+}
+.navlinks{
+    color: colors.$background-light;
+    font-size: 3rem;
+}
+.dropdown-menu Link, .dropdown-menu a{
+    text-decoration: none;
+    color: colors.$main;
+    font-size: 1.5rem;
+}
+.video-container{
+    aspect-ratio: auto;
+    margin: 0;
+    margin-bottom: -0.5em;
+    padding: 0;
+    object-fit: cover;
+    z-index: -1;
+    overflow: hidden;
+    height: 100svh;
+}
+.video-container::selection{
+    display: none;
+}
+.fix-ios-17-vid-scroll::after {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    content: "";
+    z-index: -100;
+}
+/*
+// .volume-controls {
+//     z-index: 3;
+//     right: 0;
+//     bottom: 0;
+//     // transform: translateY(-20%);
+//     background-color: transparent;
+//     padding-right: 0px;
+//     border-radius: 5px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+// }
+  
+//   input[type="range"] {
+//     height: 150px;
+//     width: 20px;
+//     writing-mode: bt-lr;
+//     -webkit-appearance: slider-vertical;
+//     appearance: slider-vertical;
+//     transform: rotate(360deg);
+//     background: colors.$background;
+//     color: colors.$main;
+//   }
+// @media screen and (-webkit-min-device-pixel-ratio:0) {
+//     input[type='range'] {
+//       overflow: hidden;
+//       width: 150px;
+//       -webkit-appearance: none;
+//       appearance: none;
+//       transform: rotate(270deg);
+//       margin-right: 0;
+//       padding-right: 0;
+//       margin-bottom: 5em;
+//       background-color: colors.$background-lightest;
+//     }
+    
+//     input[type='range']::-webkit-slider-runnable-track {
+//       height: 10px;
+//       -webkit-appearance: none;
+//       color: colors.$main;
+//     //   margin-top: -1px;
+//     }
+    
+//     input[type='range']::-webkit-slider-thumb {
+//       width: 10px;
+//       -webkit-appearance: none;
+//       height: 10px;
+//       cursor: n-resize;
+//       background: colors.$main-light;
+//       box-shadow: -80px 0 0 80px colors.$main-lightest;
+//     }
+
+// }
+//   .volume-controls button {
+//     background: none;
+//     border: none;
+//     outline: none;
+//     color: colors.$background;
+//     .bi {
+//       font-size: 1.5rem;
+//     }
+//   }
+*/
+.large-navigation:before{
+    content: "";
+    position: absolute;
+    
+}
+.large-navigation {
+    height: 100svh;
+    padding-top: 5em;
+    // padding: 20em 6em;
+    // background: #0C0C0C;
+    background-image: url('../assets/landing/blob.svg');
+    background-repeat: no-repeat;
+    background-size: 90% 200%;
+    background-position: -5% 20%;
+    background-clip: content-box;
+    h3{
+        font-size: 2rem;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 5em;
+        margin-left: 2.5em;
+        margin-right: 2em;
+        Link, a{ 
+            transition: all 1s ease-in-out;
+            color: colors.$background;
+            text-decoration: none;
+        }
+        Link:hover, a:hover{
+            color: colors.$accent;
+            font-size: 2.2rem;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    h2{
+        font-size: 2.5rem;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+        Link, a {
+            transition: all 2s ease-in-out;
+            color: colors.$background;
+            text-decoration: none;
+        }
+        Link:hover, a:hover{
+            color: colors.$accent;
+            font-size: 6rem;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+.active {
+    color: colors.$accent; 
+    font-size: 6rem; 
+}
+.youtube{
+    color: colors.$background-light;
+    font-size: 1rem;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-decoration: none;
+    transition: all 1s ease-in-out;
+    &:hover{
+        color: colors.$accent;
+        text-decoration: underline;    
+    }
+}
+.video-player{
+    width: 100%;
+    height: 100svh;
+}
+.about{   
+    height: 75svh;
+}
+.image-slider{
+    height: 100svh;
+}

@@ -1,0 +1,67 @@
+// @use "./utils/colors";
+// @use "./utils/typography";
+// @use "./utils/button";
+// @use "./utils/input";
+// @use "./components/home";
+// @use "./components/settings";
+// @use "./components/initialsetup";
+// @use "./components/app";
+
+@use "./colors";
+@use "./home";
+@use "./typography";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.dark{
+    background-color: colors.$main;
+    color: colors.$background;
+}
+.dark::selection{
+    background-color: colors.$background;
+    color: colors.$main;
+}
+.light{
+    background-color: colors.$background;
+    color: colors.$main;
+}
+.background{
+    min-height: 100svh;
+    background-blend-mode: overlay;
+    background-image: url('../assets/landing/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+:root {
+    // background-color: colors.$background;
+    // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}  
+
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 5px;
+    display: none;
+}
+
+body {
+    background-color: colors.$background;
+    color: colors.$main;
+}
+
+body{
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+nav{
+    background: #0C0C0C;
+}
