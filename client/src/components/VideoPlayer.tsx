@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+
 // import { Timeout } from "timers";
 import videoSrc from "../assets/landing/Sunbabiez-Mulholland.mp4"; // This will be imported from the API Side.
 import {Link} from "react-router-dom";
@@ -7,9 +8,10 @@ interface VideoPlayerProps {
   src: string;
 }
 
+
 const VideoPlayer: React.FC<VideoPlayerProps> = ({ src }) => {
-  const [isPlaying, setIsPlaying] = useState<boolean>(true);
-  const [volume, setVolume] = useState<number>(0); // Default volume
+  const [, setIsPlaying] = useState<boolean>(true);
+  const [volume] = useState<number>(0); // Default volume
   // const DEFAULT_VOLUME = 0.2; // Define your default volume here
 //   let previousVolume = DEFAULT_VOLUME; // Initialize previousVolume with default volume
 //   const [mutedVolume, setMutedVolume] = useState<number | null>(null); // Store volume before muting
@@ -122,9 +124,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src }) => {
       >
         Your browser does not support the video tag.
       </video>
-      <Link className="youtube position-absolute bottom-0 end-0 m-5 text-end" target="_BLANK" to="https://www.youtube.com/watch?v=A5x3XJ8aI58">
-        Sunbabiez - Mulholland drive <br /> drawing by Tibor Szakács
-      </Link>
       {/* {showVolumeControls && (
         <div className="volume-controls d-flex flex-column position-absolute" onClick={handleVolumeControlsClick}>
           <input

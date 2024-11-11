@@ -1,10 +1,11 @@
 @use "./colors";
 
+// Language Picker Button
 .lang-op{
     font-size: 1.5em;
     font-weight: 600;
-    color: colors.$main;
-    background: colors.$background-light;
+    color: colors.$background-light;
+    background: colors.$main-light;
     border: none;
     padding: 0.4em;
     border-radius: 0.2em;

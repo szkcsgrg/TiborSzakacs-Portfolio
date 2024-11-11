@@ -37,6 +37,7 @@ const App: React.FC = () => {
   const Layout = () => {
     return (
       <div>
+        {/* {language} */}
         {language === null && localStorage.getItem("lang") ? (
           <LanguageSelection setLanguage={setLanguage} />
         ) : (
