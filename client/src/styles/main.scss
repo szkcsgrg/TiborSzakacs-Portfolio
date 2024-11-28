@@ -9,17 +9,22 @@
 
 @use "./colors";
 @use "./home";
+@use "./gallery";
 @use "./typography";
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 html{
+    overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top: 15em;
+    scroll-padding-top: 4em;
+    max-width: 100svw;
+    width: 100%;
 }
 
 .dark{
+    overflow-x: hidden;
     background-color: colors.$main;
     color: colors.$background;
 }
@@ -45,8 +50,8 @@ html{
 }
 :root {
     // background-color: colors.$background;
-    // font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-family: "Montserrat", sans-serif;
+    // font-family: "Montserrat", sans-serif;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
     font-synthesis: none;
@@ -54,17 +59,27 @@ html{
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }  
 
 ::-webkit-scrollbar {
     width: 10px; 
     height: 5px;
-    display: none;
+    background: colors.$main;
+    transition: all 1s ease-in-out;
+    // display: none;
+}
+::-webkit-scrollbar-thumb {
+    background: colors.$accent;
+    border-radius: 10px;
 }
 
 body {
     background-color: colors.$background;
     color: colors.$main;
+    overflow-x: hidden;
+    max-width: 100svw;
+    width: 100%;
 }
 
 body{
@@ -75,6 +90,54 @@ body{
 nav{
     overflow: hidden;
     overflow-x: hidden;
-    // height: 10em;
+    // height: 22em;
     // background: #0C0C0C;
+}
+footer{
+    // background-color: #111;
+    background-color: #111;
+    color: colors.$background;
+    padding: 1em;
+    text-align: center;
+    position: bottom;
+    padding: 1em;
+    bottom: 0;
+    width: 100%;
+    z-index: 8;
+    .text{
+        margin: 0;
+        h5{
+            cursor: pointer;
+            margin: 0.5em;
+            a, Link{
+                text-decoration: none;
+                color: colors.$background;
+            }
+        }
+        p{
+            margin: 0;
+        }
+        font-weight: 300;
+    }
+    .footer-grey{
+        color: #666;
+        a{
+            font-size: calc(1rem + 0.2vw);
+            text-decoration: none;
+            color: colors.$accent;
+        }
+    }
+    .footer-left{
+        a{
+            text-decoration: none;
+            color: colors.$background;
+        }
+    
+    }
+}
+footer h5 p, footer h5 p Link, footer h5 p a, footer h5 a, footer h5 Link{
+    font-size: calc(1rem + 0.2vw);
+    font-weight: 500;
+    text-decoration: none;
+    color: colors.$background;
 }

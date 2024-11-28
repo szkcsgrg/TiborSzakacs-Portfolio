@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import main_3 from '../assets/rajzok/3.jpg'
 import main_4 from '../assets/rajzok/4.jpg'
@@ -15,6 +15,22 @@ import '@splidejs/react-splide/css/core';
 
 
 function RajzokGallery() {
+    const [customGap, setCustomGap] = useState<number>(0);
+    const handleResize = () => {
+        const width = window.innerWidth;
+        if (width <= 607) {
+            setCustomGap(-300);
+        } else {
+            setCustomGap(0);
+        }
+    };
+    useEffect(() => { 
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }
+    , []);
+    
   return (
     <div className=''>
         <Splide className="slide" options={{
@@ -25,10 +41,11 @@ function RajzokGallery() {
                 rewind: true, // Rewind to start when the end is reached
                 speed: 1.5 // Scrolling speed
             },
+            drag: "free", 
             arrows: false, // Hide navigation arrows
             pagination: false, // Hide pagination dots
             fixedWidth: '800px', // Fixed width for each slide
-            // gap: '200px', // Gap between slides
+            gap: Number(customGap)+"px", // Gap between slides
         }}
         extensions={{ AutoScroll }}>
             <SplideSlide>

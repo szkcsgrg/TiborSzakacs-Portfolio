@@ -1,4 +1,4 @@
-import { StrictMode, useState, useContext, createContext, ReactNode } from 'react';
+import { StrictMode, useState, useContext, createContext, ReactNode, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import {
   Outlet,
@@ -6,12 +6,12 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import LanguageSelection from './components/LanguageSelection';
 import Home from './pages/Home';
-import Paintings from './pages/Paintings';
-import Drawings from './pages/Drawings';
-import Tattos from './pages/Tattos';
+import Gallery from './pages/Gallery';
 
 import './styles/main.css';
 
@@ -20,6 +20,13 @@ const LanguageContext = createContext<{ language: string | null, setLanguage: Re
 const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<string | null>(null);
 
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("lang");
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+  }, []);
+  
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
@@ -38,13 +45,14 @@ const App: React.FC = () => {
     return (
       <div>
         {/* {language} */}
-        {language === null && localStorage.getItem("lang") ? (
+        {language === null ? (
           <LanguageSelection setLanguage={setLanguage} />
         ) : (
-          <>
+          <ErrorBoundary>
             <Navigation />
             <Outlet />
-          </>
+            <Footer />
+          </ErrorBoundary>
         )}
       </div>
     );
@@ -60,28 +68,8 @@ const App: React.FC = () => {
           element: <Home />,
         },
         {
-          path: "/rajzok",
-          element: <Drawings />,
-        },
-        {
-          path: "/zeichnungen",
-          element: <Drawings />,
-        },
-        {
-          path: "/festmenyek",
-          element: <Paintings />,
-        },
-        {
-          path: "/gemaelde",
-          element: <Paintings />,
-        },
-        {
-          path: "/tetovalasok",
-          element: <Tattos />,
-        },
-        {
-          path: "/taetowierungen",
-          element: <Tattos />,
+          path: "/gallery",
+          element: <Gallery />,
         }
       ],
     },

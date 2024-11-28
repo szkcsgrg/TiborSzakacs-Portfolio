@@ -2,14 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 
 // import { Timeout } from "timers";
 import videoSrc from "../assets/landing/Sunbabiez-Mulholland.mp4"; // This will be imported from the API Side.
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 interface VideoPlayerProps {
   src: string;
 }
 
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ src }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({  }) => {
   const [, setIsPlaying] = useState<boolean>(true);
   const [volume] = useState<number>(0); // Default volume
   // const DEFAULT_VOLUME = 0.2; // Define your default volume here

@@ -24,3 +24,21 @@
     font-size: 1.6em;
     padding: 0.32em;
 }
+p{
+    Link, a{
+        font-size: calc(1.5rem + 0.2vw);
+        text-decoration: none;
+        color: colors.$background;
+    }
+}
+.kapcsolat, .hamburger{
+    font-size: calc(1.5rem + 0.2vw);
+    font-weight: 400;
+    color: colors.$background;
+    Link, a{
+        font-size: calc(1.5rem + 0.2vw);
+        font-weight: 400;
+        text-decoration: none;
+        color: colors.$background;
+    }
+}
