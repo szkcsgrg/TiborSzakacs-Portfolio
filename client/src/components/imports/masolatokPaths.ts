@@ -26,9 +26,10 @@ import img24 from "../../assets/masolatok/PELLES_MÁSOLAT,_70x40,_olaj-fa.jpg";
 import img25 from "../../assets/masolatok/SEURAT_MÁSOLAT.jpg";
 import img26 from "../../assets/masolatok/Szinyei,_A_léghajó,_60x60,_olaj-vászon,_Másolat.jpg";
 import img27 from "../../assets/masolatok/Face_Copy_Oil-canvas_70x50.jpg"
+import img28 from "../../assets/masolatok/Geopolitikus_gyermek_figyeli_Dali_masolat_papir_tempera.jpg";
 
 export const masolatokPaths = [
     img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
     img11, img12, img13, img14, img15, img16, img17, img18, img19, img20,
-    img21, img22, img23, img24, img25, img26, img27
+    img21, img22, img23, img24, img25, img26, img27, img28
 ];

@@ -109,6 +109,11 @@ import img107 from "../../assets/festmenyek/UTCA_5_40x30_olaj-vászon.jpg";
 import img108 from "../../assets/festmenyek/UTCA_6_30x20_olaj-fa.jpg";
 import img109 from "../../assets/festmenyek/Viszlát_70O50olaj-vászon.jpg";
 import img110 from "../../assets/festmenyek/20x20 olajvászon.jpg";
+import img111 from "../../assets/festmenyek/241204-1.jpg";
+import img112 from "../../assets/festmenyek/241204-2.jpg";
+import img113 from "../../assets/festmenyek/241204-3.jpg";
+import img114 from "../../assets/festmenyek/241204-4.jpg";
+import img115 from "../../assets/festmenyek/241204-5.jpg";
 
 export const festmenyekPaths = [
     img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
@@ -121,7 +126,8 @@ export const festmenyekPaths = [
     img71, img72, img73, img74, img75, img76, img77, img78, img79, img80,
     img81, img82, img83, img84, img85, img86, img87, img88, img89, img90,
     img91, img92, img93, img94, img95, img96, img97, img98, img99, img100,
-    img101, img102, img103, img104, img105, img106, img107, img108, img109, img110
+    img101, img102, img103, img104, img105, img106, img107, img108, img109, img110,
+    img111, img112, img113, img114, img115
 ];
 
 //Hibas kepek? 

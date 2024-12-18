@@ -150,7 +150,7 @@ const Home = () => {
             animate={{ x: 0 , opacity: 1 }}
             className='contact position-absolute d-flex gap-3 bottom-0 start-0 mx-3 text-start'>
             <p>
-              <a href="mailto:contact@tiborszakacs.com">kontakt@szakacstibor.com</a>
+              <a href="mailto:kontakt@tiborszakacs.com">kontakt@szakacstibor.com</a>
             </p>
             /
             <p>
@@ -175,14 +175,14 @@ const Home = () => {
         </div>
       </motion.div>
 
-      <div className='d-none d-md-block gradient-transition'></div>
+      <div className='d-none d-xl-block gradient-transition'></div>
 
       <motion.div 
       initial={{ opacity: 0 }}
       transition={{ duration: 2 }}
       animate={{ opacity: 1 }} 
       id={language === "hu" ? "rolam" : "ubermich"} className='p-4 about d-flex flex-row my-lg-3'>
-        <div className='col-12 col-md-12 my-0 d-flex flex-column flex-xxl-row justify-content-evenly align-items-center'>
+        <div id='#' className='col-12 col-md-12 my-0 d-flex flex-column flex-xxl-row justify-content-evenly align-items-center'>
           <img src={profile} alt="Profile Image" className='col-xxl-6'/>                                                 
           <div className='profile-img d-flex flex-column justify-content-center col-xxl-6'>                          
             <motion.h1 
@@ -202,7 +202,7 @@ const Home = () => {
                   <p>
                     Jellemző stílus nélkül alkotok. Pozitív terápiaként, gyógymódként hat rám bármelyik képem létrehozása, legyen az saját kép vagy másolat.
                     <br />
-                    Idén belekóstoltam a tetoválásba és a falfestésbe is. Ezek méggyerekcipőben járó elfoglaltságok.
+                    Idén belekóstoltam a tetoválásba és a falfestésbe is. Ezek még gyerekcipőben járó elfoglaltságok.
                   </p>
                   <p>Ha fel szeretné venni velem a <span className='link' onClick={() => scrollToElement("kapcsolat")}>kapcsolatot</span>, kérem keressen bátran!</p>
                 </>

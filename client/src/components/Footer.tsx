@@ -3,6 +3,9 @@ import { LanguageContext } from '../main';
 import { Link, useLocation } from 'react-router-dom';
 
 function Footer() {
+    const oneletraj = "https://vps.szakacsgergo.com:8802/public/oneletrajz.pdf";
+    const lebenslauf = "https://vps.szakacsgergo.com:8802/public/lebenslauf.pdf";
+
     const context = useContext(LanguageContext);
     if (!context) {
         throw new Error("Navigation must be used within a LanguageProvider");
@@ -39,7 +42,7 @@ function Footer() {
                     </h5>
                     <h5>
                         <p>
-                            <a href="mailto:contact@tiborszakacs.com">contact@tiborszakacs.com</a>
+                            <a href="mailto:kontakt@tiborszakacs.com">kontakt@tiborszakacs.com</a>
                         </p>
                     </h5>
                     <h5>
@@ -49,7 +52,7 @@ function Footer() {
                     </h5>
                     <h5>
                         <p>
-                            <Link to={language === "hu" ? "https://vps.szakacsgergo.com:80/public/tibor/oneletrajz.pdf" : "https://vps.szakacsgergo.com:80/public/tibor/lebenslauf.pdf"}>{language === "hu" ? "Önéletrajz" : "Lebenslauf"}</Link>
+                            <Link to={language === "hu" ? oneletraj : lebenslauf}>{language === "hu" ? "Önéletrajz" : "Lebenslauf"}</Link>
                         </p>
                     </h5>
                 </div>

@@ -4,7 +4,7 @@ import main_3 from '../assets/rajzok/3.jpg'
 import main_4 from '../assets/rajzok/4.jpg'
 import main_12 from '../assets/rajzok/12.jpg'
 import main_17 from '../assets/rajzok/17.jpg'
-import main_g from '../assets/rajzok/Griezmann.jpg'
+import main_g from '../assets/rajzok/23.jpg'
 
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";

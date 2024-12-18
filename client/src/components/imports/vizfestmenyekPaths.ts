@@ -6,7 +6,7 @@ import img4 from "../../assets/vizfestmenyek/9.jpg";
 import img5 from "../../assets/vizfestmenyek/Boat_paper_watercolour.jpg";
 import img6 from "../../assets/vizfestmenyek/Cheers_paper_watercolour.jpg";
 import img7 from "../../assets/vizfestmenyek/Face_paper_watercolour.jpg";
-import img8 from "../../assets/vizfestmenyek/Geopolitikus_gyermek_figyeli_Dali_masolat_papir_tempera.jpg";
+// import img8 from "../../assets/vizfestmenyek/Geopolitikus_gyermek_figyeli_Dali_masolat_papir_tempera.jpg";
 import img9 from "../../assets/vizfestmenyek/Girl_paper_watercolour.jpg";
 import img10 from "../../assets/vizfestmenyek/Memory_paper_watercolour.jpg";
 import img11 from "../../assets/vizfestmenyek/On_my_way_to_work_paper_watercolour.jpg";
@@ -17,10 +17,13 @@ import img15 from "../../assets/vizfestmenyek/Snow_2_paper_watercolour.jpg";
 import img16 from "../../assets/vizfestmenyek/Street_paper_watercolour.jpg";
 import img17 from "../../assets/vizfestmenyek/Trees_paper_watercolour.jpg";
 import img18 from "../../assets/vizfestmenyek/Uncle_paper_watercolour.jpg";
-import img19 from "../../assets/vizfestmenyek/IMG_20240919_171402.jpg";
+// import img19 from "../../assets/vizfestmenyek/IMG_20240919_171402.jpg";
 import img20 from "../../assets/vizfestmenyek/IMG_20240919_171432.jpg";
+import img21 from "../../assets/vizfestmenyek/IMG_20241202_171140~2.jpg";
+import img22 from "../../assets/vizfestmenyek/IMG_20241202_171150~2.jpg";
+import img23 from "../../assets/vizfestmenyek/IMG_20241202_171205~2.jpg";
 
 export const vizfestmenyekPaths = [
-    img1, img2, img3, img4, img5, img6, img7, img8, img9, img10,
-    img11, img12, img13, img14, img15, img16, img17, img18, img19, img20
+    img1, img2, img3, img4, img5, img6, img7, img9, img10,
+    img11, img12, img13, img14, img15, img16, img17, img18, img20, img21, img22, img23
 ];
